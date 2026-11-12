@@ -1,8 +1,7 @@
+## Critérios de aceitação
 
-# Testes de Aceitação
-
-| Critério | Teste | O que comprova |
-|---|---|---|
-| C1 - Adicionar produto | C1 - Adiciona produto ao carrinho | Comprova que o produto é adicionado corretamente e aparece no carrinho. |
-| C2 - Carrinho vazio | C2 - Impede finalizar compra com carrinho vazio | Comprova que o sistema impede finalizar uma compra sem produtos. |
-| C3 - Remover produto | C3 - Remove produto e atualiza o total | Comprova que a remoção atualiza os produtos e o valor total. |
+| # | Critério | DADO QUE… QUANDO… ENTÃO… | Teste |
+|---|---|---|---|
+| C1 | Cadastrar produto | Dado que irei cadastrar um produto · Quando insiro corretamente os campos do item · Então uma mensagem de sucesso deve aparecer e produto visível na lista. | `tests/lista-compras.spec.js` — teste "adiciona um item e atualiza o resumo" |
+| C2 | Impedir cadastro com campos obrigatórios vazios | Dado que irei cadastrar um produto · Quando deixo de inserir campos obrigatorios do item · Então uma mensagem de validação e o produto não deve ser visível na lista. | `tests/lista-compras.spec.js` — teste "recusa item vazio e mantém a lista intacta" |
+| C3 | Manter produto após atualizar a página | Dado que o produto foi adicionado corretamente · Quando atualizo a pagina listando os produtos · Então o produto, preço e estoque devem estar visíveis após o reload. | `tests/lista-compras.spec.js` — teste "conclui um item e mantém o estado após recarregar" |
