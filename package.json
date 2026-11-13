@@ -1,22 +1,21 @@
 {
-  "name": "testesoftware-playwright",
+  "name": "techstore-playwright",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sistema de cadastro de produtos eletrônicos com testes de aceitação em Playwright",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuizFSLanga/TesteSoftware-Playwright.git"
-  },
-  "keywords": [],
+  "keywords": [
+    "playwright",
+    "teste-de-aceitacao",
+    "cadastro-de-produtos"
+  ],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuizFSLanga/TesteSoftware-Playwright/issues"
-  },
-  "homepage": "https://github.com/LuizFSLanga/TesteSoftware-Playwright#readme",
   "devDependencies": {
     "@playwright/test": "^1.65.0"
   }
